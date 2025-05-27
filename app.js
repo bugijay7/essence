@@ -17,7 +17,7 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://essence-rosy.vercel.app/',
+  origin: 'https://essence-rosy.vercel.app',
   credentials: true
 }));
 
