@@ -86,7 +86,7 @@ function BookingPage() {
 
       console.log('Payload being sent to API:', payload);
 
-      await axios.post('hhttps://essence-b1fv.onrender.com/api/appointments', payload, {
+      await axios.post('https://essence-b1fv.onrender.com/api/appointments', payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
    
