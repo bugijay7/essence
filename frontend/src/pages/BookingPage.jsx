@@ -16,7 +16,7 @@ function BookingPage() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const servicesRes = await axios.get('http://localhost:3000/api/services');
+        const servicesRes = await axios.get('https://essence-b1fv.onrender.com/api/services');
         console.log('Fetched services:', servicesRes.data);
         setServices(servicesRes.data);
       } catch (err) {
@@ -26,7 +26,7 @@ function BookingPage() {
 
     const fetchStylists = async () => {
       try {
-        const stylistsRes = await axios.get('http://localhost:3000/api/stylists');
+        const stylistsRes = await axios.get('https://essence-b1fv.onrender.com/api/stylists');
         console.log('Fetched stylists:', stylistsRes.data);
         setStylists(stylistsRes.data);
       } catch (err) {
@@ -86,7 +86,7 @@ function BookingPage() {
 
       console.log('Payload being sent to API:', payload);
 
-      await axios.post('http://localhost:3000/api/appointments', payload, {
+      await axios.post('hhttps://essence-b1fv.onrender.com/api/appointments', payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
    

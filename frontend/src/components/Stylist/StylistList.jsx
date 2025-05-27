@@ -10,7 +10,7 @@ function StylingList() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/api/stylists') // Your backend endpoint
+      .get('https://essence-b1fv.onrender.com/api/stylists') // Your backend endpoint
       .then((response) => {
         console.log('Stylist API response:', response.data);
         console.log('Response data:', response.data); // fixed here

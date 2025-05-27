@@ -19,17 +19,17 @@ function ClientDashboard() {
       }
 
       try {
-        const userRes = await axios.get('http://localhost:3000/api/users/me', {
+        const userRes = await axios.get('https://essence-b1fv.onrender.com/api/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const userData = userRes.data.user || userRes.data;
         setUser(userData);
 
         const [servicesRes, stylistsRes] = await Promise.all([
-          axios.get('http://localhost:3000/api/services', {
+          axios.get('https://essence-b1fv.onrender.com/api/services', {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get('http://localhost:3000/api/stylists', {
+          axios.get('https://essence-b1fv.onrender.com/api/stylists', {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -37,7 +37,7 @@ function ClientDashboard() {
         setStylists(stylistsRes.data.stylists || stylistsRes.data);
 
         const apptRes = await axios.get(
-          'http://localhost:3000/api/appointments/client',
+          'https://essence-b1fv.onrender.com/api/appointments/client',
           {
             headers: { Authorization: `Bearer ${token}` },
           }

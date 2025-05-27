@@ -7,7 +7,7 @@ function FullServiceList() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/api/services') // Replace with your actual endpoint
+      .get('https://essence-b1fv.onrender.com/api/services') // Replace with your actual endpoint
       .then((response) => {
          console.log('API response data:', response.data);
   setServices(response.data);

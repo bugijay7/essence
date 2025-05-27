@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/register', formData);
+      const res = await axios.post('https://essence-b1fv.onrender.com/api/auth/register', formData);
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || 'Registration failed');

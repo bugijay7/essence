@@ -13,7 +13,7 @@ function Login() {
     setErrorMsg('');
 
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/login', {
+      const response = await axios.post('https://essence-b1fv.onrender.com/api/auth/login', {
         email,
         password,
       });

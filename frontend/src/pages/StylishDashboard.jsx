@@ -18,8 +18,8 @@ function StylishDashboard() {
       try {
         setLoading(true);
         const [stylistRes, apptRes] = await Promise.all([
-          axios.get(`http://localhost:3000/api/stylists/user/${stylistId}`),
-          axios.get(`http://localhost:3000/api/appointments/stylist/${stylistId}`)
+          axios.get(`https://essence-b1fv.onrender.com/api/stylists/user/${stylistId}`),
+          axios.get(`https://essence-b1fv.onrender.com/api/appointments/stylist/${stylistId}`)
         ]);
 
         if (isMounted) {
