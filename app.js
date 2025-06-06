@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import { sql } from './config/db.js'
 
-// ✅ FIXED: Import routes, not controllers
+
 import authRoutes from './routes/authRoute.js';
 import userRoutes from './routes/userRoutes.js';
 import serviceRoutes from './routes/serviceRoute.js';
@@ -26,7 +26,7 @@ app.use(express.json());
 
 
 
-// ✅ Correct usage of routes
+
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/services', serviceRoutes);
